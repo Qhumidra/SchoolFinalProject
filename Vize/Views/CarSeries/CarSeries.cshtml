@@ -1,0 +1,53 @@
+﻿@model List<Vize.Models.News>
+@{
+    ViewData["Title"] = "CarSeries";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+<style>
+    h1 {
+        font-family: cursive;
+        margin-top: -109%;
+    }
+
+    h2 {
+        color: red;
+        margin-left: 17%;
+    }
+
+    h6 {
+        color: blue;
+        margin-left: 15%;
+    }
+
+    img {
+        margin-left: 15%;
+    }
+    p {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+</style>
+<html style="background-color: white">
+<body>
+    <h1>Araba Serileri Haberleri</h1>
+    <hr />
+    <div>
+        @{
+
+            foreach (var news in Model)
+            {
+                if (news.Serie.SeriesId == 1)
+                {
+                    <h6>@news.Serie.Name - @news.Serie.Race.Name</h6>
+
+                    <h2>@news.NewsTitle</h2>
+                    <br /><br />
+                    <img src="~/@news.Image.ImgPath" style="height: @news.Image.Height%;width: @news.Image.Width%" />
+                    <p>@news.NewsArticle</p>
+                    <hr />
+                }
+            }
+        }
+    </div>
+</body>
+</html>

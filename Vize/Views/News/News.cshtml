@@ -1,0 +1,49 @@
+﻿@model Vize.Models.News
+@{
+    ViewData["Title"] = "GetAll";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+<style>
+    h1 {
+        font-family: cursive;
+        margin-top: -109%;
+    }
+
+    h2 {
+        color: red;
+        margin-left: 17%;
+    }
+
+    h6 {
+        color: blue;
+        margin-left: 15%;
+    }
+
+    img {
+        margin-left: 15%;
+    }
+    p {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+</style>
+<html style="background-color: white">
+<body>
+    <h1>Haber On izlemesi</h1>
+    <hr />
+    <div>
+        @{
+            
+            <h6>@Model.Serie.Name - @Model.Serie.Race.Name</h6>
+
+            <h2>@Model.NewsTitle</h2>
+            <br /><br />
+            <img class="newsImage" src="~/@Model.Image.ImgPath" style="height: @Model.Image.Height%;width: @Model.Image.Width%" />
+            <p>@Model.NewsArticle</p>
+            <hr />
+        }
+        
+    </div>
+</body>
+</html>

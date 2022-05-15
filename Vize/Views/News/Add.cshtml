@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+<style>
+    h1 {
+        font-family: cursive;
+        margin-top: -109%;
+        margin-left: 40%;
+    }
+    .addNews {
+        margin-top: 10%;
+        margin-left: 30%;
+    }
+</style>
+    <head>
+        <h1>Haber Ekle</h1>
+        <hr />
+    </head>
+    <body>
+        <table id="addNews" class="addNews">
+            <tr>
+                <td>
+                    Haber Id :
+                </td>
+                <td>
+                    <input type="text" name="NewsId" id="NewsId" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Haber Başlığı :
+                </td>
+                <td>
+                    <input type="text" name="NewsTitle" id="NewsTitle" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Haber Icerigi :
+                </td>
+                <td>
+                    <textarea name="NewsArticle" id="NewsArticle" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Resim ID:
+                </td>
+                <td>
+                    <input type="text" name="Image.ImageId" id="Image.ImageId" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Resim Genişliği:
+                </td>
+                <td>
+                    <input type="text" name="Image.Width" id="Image.Width" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Resim Yüksekliği:
+                </td>
+                <td>
+                    <input type="text" name="Image.Height" id="Image.Height" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Eklenecek resimin adi ve dosya turu(default.jpg):
+                </td>
+                <td>
+                    <input type="text" name="Image.ImgPath" id="Image.ImgPath" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Yaris Serisi Id:
+                </td>
+                <td>
+                    <input type="text" name="Serie.SeriesId" id="Serie.SeriesId" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Serinin Adi :
+                </td>
+                <td>
+                    <input type="text" name="Serie.Name" id="Serie.Name" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Yaris Id:
+                </td>
+                <td>
+                    <input type="text" name="Serie.Race.RaceId" id="Serie.Race.RaceId" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Yarisin Adi:
+                </td>
+                <td>
+                    <input type="text" name="Serie.Race.Name" id="Serie.Race.Name" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Kaydet" />
+                </td>
+            </tr>
+        </table>
+    </body>
+}

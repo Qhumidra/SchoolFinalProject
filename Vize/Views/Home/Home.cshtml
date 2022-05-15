@@ -1,0 +1,50 @@
+﻿@model List<Vize.Models.DTOs.NewsWithAllColumn>
+@{
+    ViewData["Title"] = "MainMenu";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+<style>
+    h1 {
+        font-family: cursive;
+        margin-top: -109%;
+    }
+
+    h2 {
+        color: red;
+        margin-left: 17%;
+    }
+
+    h6 {
+        color: blue;
+        margin-left: 15%;
+    }
+
+    img {
+        margin-left: 15%;
+    }
+
+    p {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+</style>
+<html style="background-color: white">
+<body>
+    <h1>MainMenu</h1>
+    <hr />
+    <div>
+        @{
+            foreach (var news in Model)
+            {
+                <h6>@news.SeriesName - @news.RacesName</h6>
+
+                <h2>@news.NewsTitle</h2>
+                <br /><br />
+                <img src="~/@news.ImgPath" style="height: @news.Height%;width: @news.Width%" />
+                <p>@news.NewsArticle</p>
+                <hr />
+            }
+        }
+    </div>
+</body>
+</html>
